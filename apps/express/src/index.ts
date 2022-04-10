@@ -37,4 +37,4 @@ app.get('/post', async (req, res) => {
 	res.json(battle);
 });
 
-const server = app.listen(3000);
+const server = app.listen(8000);
