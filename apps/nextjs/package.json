@@ -21,7 +21,7 @@
 		"postcss": "^8.4.12",
 		"tailwindcss": "^3.0.23",
 		"tsconfig": "*",
-		"types": "*",
+		"shared": "*",
 		"typescript": "4.6.3"
 	}
 }

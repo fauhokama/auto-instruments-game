@@ -1,8 +1,8 @@
 export type Creature = {
 	attack: number;
 	health: number;
-	order: number;
 	type: string;
+	order?: number;
 	image?: JSX.Element;
 };
 

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Creature } from 'types';
+import { Creature } from 'shared';
 
 const CreatureComponent: FC<Creature> = ({ type, attack, health, image }) => {
 	return (
