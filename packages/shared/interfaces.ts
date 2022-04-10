@@ -12,6 +12,7 @@ export type Team = {
 };
 
 export type BattleState = {
+	id: number;
 	playerTeam: Team;
 	enemyTeam: Team;
 };
