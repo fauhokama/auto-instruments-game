@@ -1,8 +1,9 @@
 import { FC, Suspense, useEffect, useState } from 'react';
 import CreatureComponent from '../Creature/CreatureComponent';
+import { BattleState } from 'types';
 
 const BattleView: FC = () => {
-	const [data, setData] = useState({});
+	const [data, setData] = useState<BattleState | null>(null);
 
 	useEffect(() => {
 		const getState = async () => {
@@ -16,7 +17,7 @@ const BattleView: FC = () => {
 		<div>
 			<h1> Team 1 </h1>
 			<Suspense>
-				{data.team1?.creatures.map(creature => (
+				{data?.playerTeam.creatures.map(creature => (
 					<CreatureComponent key={creature.order} {...creature} />
 				))}
 			</Suspense>

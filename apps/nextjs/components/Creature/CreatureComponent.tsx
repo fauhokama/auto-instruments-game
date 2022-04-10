@@ -1,17 +1,11 @@
 import { FC } from 'react';
+import { Creature } from 'types';
 
-type CreatureComponentProps = {
-	name: string;
-	attack: number;
-	health: number;
-	image?: JSX.Element;
-};
-
-const CreatureComponent: FC<CreatureComponentProps> = ({ name, attack, health, image }) => {
+const CreatureComponent: FC<Creature> = ({ type, attack, health, image }) => {
 	return (
 		<div>
 			{image}
-			<h1> {name} </h1>
+			<h1> {type} </h1>
 			<p> Attack: {attack} </p>
 			<p> Health: {health} </p>
 		</div>

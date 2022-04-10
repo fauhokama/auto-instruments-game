@@ -1,12 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { BattleState } from 'types';
 
 type Data = any;
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-	const json = {
-		battle: 'demo',
-		team1: {
+export default function handler(req: NextApiRequest, res: NextApiResponse<BattleState>) {
+	const battleState: BattleState = {
+		playerTeam: {
 			name: 'Team 1',
 			creatures: [
 				{
@@ -23,7 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 				},
 			],
 		},
-		team2: {
+		enemyTeam: {
 			name: 'Team 2',
 			creatures: [
 				{
@@ -41,5 +41,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 			],
 		},
 	};
-	res.status(200).json(json);
+	res.status(200).json(battleState);
 }
