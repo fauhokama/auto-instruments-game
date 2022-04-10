@@ -1,1 +1,0 @@
-import { Creature } from './interfaces';
