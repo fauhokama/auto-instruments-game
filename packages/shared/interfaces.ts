@@ -15,4 +15,11 @@ export type BattleState = {
 	id: number;
 	playerTeam: Team;
 	enemyTeam: Team;
+	turns?: Turn[];
+};
+
+export type Turn = {
+	fromcreature: Creature;
+	tocreature?: Creature | Creature[];
+	effect: any;
 };

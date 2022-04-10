@@ -3,7 +3,7 @@ import CreatureComponent from '../Creature/CreatureComponent';
 import { BattleState } from 'shared';
 
 const BattleView: FC = () => {
-	const [data, setData] = useState<BattleState | null>(null);
+	const [data, setData] = useState<BattleState>();
 
 	useEffect(() => {
 		const getState = async () => {
@@ -13,9 +13,15 @@ const BattleView: FC = () => {
 		getState();
 	}, []);
 
+	const printBattle = () => {
+		console.log(data);
+	};
+
 	return (
 		<div>
-			<button className="bg-red-300 p-4 mb-4"> Battle! </button>
+			<button onClick={() => printBattle()} className="bg-red-300 p-4 mb-4">
+				Battle!
+			</button>
 			<div className="flex justify-between">
 				<div>
 					<h1> Team 1 </h1>
